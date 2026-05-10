@@ -2,18 +2,10 @@ package com.sementa.poc_local_database.database
 
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.RoomDatabaseConstructor
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSDocumentDirectory
 import platform.Foundation.NSFileManager
 import platform.Foundation.NSUserDomainMask
-
-@Suppress(names = ["NO_ACTUAL_FOR_EXPECT"])
-actual object AppDatabaseConstructor: RoomDatabaseConstructor<AppDatabase> {
-    actual override fun initialize(): AppDatabase {
-        TODO("Not yet implemented")
-    }
-}
 
 fun getDatabaseBuilder(): RoomDatabase.Builder<AppDatabase> {
     val dbFilePath = documentDirectory() + "/my_room.db"
