@@ -17,5 +17,4 @@ actual fun platformModule() = module {
 class UserRepositoryHelper: KoinComponent {
     private val userRepository: UserRepository by inject()
     fun getUserRepository(): UserRepository = userRepository
-
 }
